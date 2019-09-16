@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <link rel="stylesheet" type="text/css" href="https://greeder59.github.io/web-page3/theme/css/style.css" />
+        <title>"Welcome to my World" - Well, Here we are.</title>
+        <meta charset="utf-8" />
+
+
+
+
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://greeder59.github.io/web-page3/">"Welcome to my World" <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="https://greeder59.github.io/web-page3/category/finances.html">Finances</a></li>
+            <li><a href="https://greeder59.github.io/web-page3/category/gardening.html">Gardening</a></li>
+            <li class="active"><a href="https://greeder59.github.io/web-page3/category/general.html">General</a></li>
+         
+            <li><a href="https://greeder59.github.io/web-page3/pages/about-me.html">About me</a></li>
+       
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://greeder59.github.io/web-page3/well-here-we-are.html" rel="bookmark"
+         title="Permalink to Well, Here we are.">Well, Here we are.</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2019-01-20T00:00:00-08:00">
+      Sun 20 January 2019
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="https://greeder59.github.io/web-page3/author/gordon-reeder.html">Gordon Reeder</a>
+    </address>
+    <div class="category">
+        Category: <a href="https://greeder59.github.io/web-page3/category/general.html">General</a>
+    </div>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <p><strong>And how did we get here?</strong></p>
+<p>In the beginning was HTML. And HTML was the web and the web was HTML. In 2001 I became curious about how web sites were created. So I bought a book: "The Complete Idiots Guide to Creating Web Sites". It was a book about HTML and CSS. But that's how web sites were made back then. So I read the book and set forth to create a web site. It was a simple site. But, it grew, and grew. Pretty soon it got out of control. You see, I was directly editing the HTML for each post and page. As you can imagine, it was a difficult task that just got harder. It wasn't long before I was ignoring the site and not making regular updates.</p>
+<p><strong>Looking for alternatives</strong></p>
+<p>By now I was looking for a way to make site updates easier. At first I tried to come up with a way of separating content from the HTML. The idea was to write content as runoff files and use a C program to merge it with an HTML page skeleton. Although that worked, kinda, sorta, it was a bit rough and was really particular about how the input files were formatted. Then I started looking at PHP and MySQL. That could have worked, but seemed like too much trouble. I also looked at using the C preprocessor, and even mailmerge. </p>
+<p>At this point I began seriously looking at Joomla, Wordpress, and some other content management systems. The big problem that I had with them was that everything tended to be up on a server. I had no cohesive version of my web site on my home system. Further, many of the CMS or the CMS hosts limited the ability to personalize the HTML and CSS files.</p>
+<p>About this time I learned Python. And I found out about Python web frameworks. For a while I explored the idea of creating a Django or Flask based web site. I was able to create a couple of Django web sites. But using a framework meant doing a lot
+of upfront programming. It was like telling a shopkeeper that he had to build his shop before he could start his business.
+When it came down to it, Python web frameworks are not that easy to deploy or create.</p>
+<p><strong>Pelican</strong></p>
+<p>Then I found out that other people were thinking like me. I first got an inkling of this when I found the Static Pages plugin for Flask. This looked promising. Bypass MySQL and upload content as tagged text files. Use the markdown module to render the content as HTML. Then the view controller would merge with a template and render the final output. But it would still require some programming from me. And there was still the task of deploying a python framework that I was still struggling with.</p>
+<p>Then I heard about Jekyll. But I didn't like it. However it did lead me to staticgen.com. And there I found the Pelican static site generator. It was written in Python, my newest favorite programming language, and used the Jinja2 template system used by Django. It was dead simple. Put your content into a content folder as tagged text files (IE: markdown). Style sheets and HTML templates go into another folder. Then run a command and everything goes into the 'Blend-o-Matic' and out comes a stack of static web pages ready for upload.</p>
+<p>And so here we are. Version 3 of my web site. Welcome to my World!</p>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
