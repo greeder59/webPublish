@@ -22,7 +22,10 @@ body {
     display : block ;
 }
 
-
+li {
+	margin-top:  0.6em;
+	margin-bottom:  0.6em;
+}
 
 a:link    { color : blue ; text-decoration : none ;      }
 a:hover   { color : blue ; text-decoration : underline ; }
@@ -51,6 +54,8 @@ pre, blockquote {
     background-color: #EEEEEE;
 }
 
+
+
 /*These are styles for ID tags
 */
 
@@ -69,8 +74,10 @@ pre, blockquote {
     display : block ;
 }
 
+
 #menu {
 	font-family: arial, helvetica, verdana, sans-serif ;
+	font-size: 150%;
     color: #FFFFFF ;
     background-color: #777777 ;
     text-decoration: none ;

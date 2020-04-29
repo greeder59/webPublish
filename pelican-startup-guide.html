@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-          <link rel="stylesheet" type="text/css" href="https://greeder59.github.io/web-page3/theme/css/style.css" />
+          <link rel="stylesheet" type="text/css" href="https://greeder59.github.io/webPublish/theme/css/style.css" />
         <title>"Welcome to my World" - Pelican Startup Guide</title>
         <meta charset="utf-8" />
 
@@ -13,20 +13,23 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://greeder59.github.io/web-page3/">"Welcome to my World" <strong></strong></a></h1>
+                <h1><a href="https://greeder59.github.io/webPublish/">"Welcome to my World" <strong></strong></a></h1>
         </header><!-- /#banner -->
         <nav id="menu"><ul>
-            <li><a href="https://greeder59.github.io/web-page3/category/finances.html">Finances</a></li>
-            <li><a href="https://greeder59.github.io/web-page3/category/gardening.html">Gardening</a></li>
-            <li><a href="https://greeder59.github.io/web-page3/category/general.html">General</a></li>
+            <li><a href="https://greeder59.github.io/webPublish/category/be-prepared.html">Be Prepared</a></li>
+            <li><a href="https://greeder59.github.io/webPublish/category/cooking.html">Cooking</a></li>
+            <li><a href="https://greeder59.github.io/webPublish/category/finances.html">Finances</a></li>
+            <li><a href="https://greeder59.github.io/webPublish/category/gardening.html">Gardening</a></li>
+            <li><a href="https://greeder59.github.io/webPublish/category/general.html">General</a></li>
+            <li class="active"><a href="https://greeder59.github.io/webPublish/category/technology.html">Technology</a></li>
          
-            <li><a href="https://greeder59.github.io/web-page3/pages/about-me.html">About me</a></li>
+            <li><a href="https://greeder59.github.io/webPublish/pages/about-me.html">About me</a></li>
        
         </ul></nav><!-- /#menu -->
 <section id="content" class="body">
   <header>
     <h2 class="entry-title">
-      <a href="https://greeder59.github.io/web-page3/drafts/pelican-startup-guide.html" rel="bookmark"
+      <a href="https://greeder59.github.io/webPublish/pelican-startup-guide.html" rel="bookmark"
          title="Permalink to Pelican Startup Guide">Pelican Startup Guide</a></h2>
  
   </header>
@@ -38,18 +41,18 @@
       Fri 10 August 2018
     </time>
     <address class="vcard author">
-      By           <a class="url fn" href="https://greeder59.github.io/web-page3/author/gordon-reeder.html">Gordon Reeder</a>
+      By           <a class="url fn" href="https://greeder59.github.io/webPublish/author/gordon-reeder.html">Gordon Reeder</a>
     </address>
     <div class="category">
-        Category: <a href="https://greeder59.github.io/web-page3/category/pelican.html">Pelican</a>
+        Category: <a href="https://greeder59.github.io/webPublish/category/technology.html">Technology</a>
     </div>
   </footer><!-- /.post-info -->
   <div class="entry-content">
-    <p>These are the steps to create a web site using the Pelican static web site tool and host it on Netlify. The setup is a bit long and may look complicated. That is because I simplify nothing. Not only will we use Pelican, I will take you through setting up and using a Python virtual environment, setting up and using git revision control. Once we get past the setup, Pelican is an easy to use tool. Among other things, it gives you the ability to separate the tasks of site design and layout from content creation. Furthermore, changes to the site design can be made without affecting content, and vice versa.</p>
+    <p>Pelican is a static web site generator written in Python. It creates completely static output that can be hosted on almost any server.  These are the steps to set up the Pelican static web site tool and host a web site on Netlify. The setup is a bit long and may look complicated. That is because I cover all the bases. Not only will we use Pelican, I will take you through setting up and using a Python virtual environment, setting up and using git revision control. Once we get past the setup, Pelican is an easy to use tool. Among other things, it gives you the ability to separate the tasks of site design and layout from content creation. Furthermore, changes to the site design can be made without affecting content, and vice versa.</p>
 <p>First off: all this is done on a Linux system. Although things will be similar on a Macbook. If you are a Windows user... uh, dude, If you are going to be a developer you really need to learn to use a real computer. </p>
 <p>In the instructions below, the final web site and project are named eval-pelican. I will use the word <em>you</em> a lot as a stand in for your username. IE: /home/<em>you</em>/Documents to refer to your Documents folder on your system. Replace <em>you</em> with your own username.</p>
 <p>I also assume that you know how to open and use a command line terminal. The indented lines below are commands that are entered in a terminal window. The '$' is the prompt and should't be entered. Your prompt string will be different, but it will end with a '$'.</p>
-<p>How it all works:</p>
+<p><strong>How it all works:</strong></p>
 <ul>
 <li>First you will install some tools. I'm assuming that you are starting from square one. So you will check the version of Python, install the Python virtual environment and the git version control system.</li>
 <li>With all the tools installed, you will setup your project folder, setup a few basic configuration files and install Pelican.</li>
@@ -110,7 +113,7 @@
 <p>$ source project/bin/activate</p>
 </blockquote>
 <p>You will see that the name of the virtual environment is now shown within prenthesis in the command prompt.</p>
-<p>Now you can install the Pelican and Markdown packages as usual. But, instead of being installed as system wide resource they will be installed in the local virtual environment.</p>
+<p>With the virtual environment active, you can now install the Pelican and Markdown packages as usual. But, instead of being installed as system wide resource they will be installed in the local virtual environment.</p>
 <blockquote>
 <p>$ pip install pelican markdown</p>
 </blockquote>
@@ -164,7 +167,7 @@ This will create a basic skeleton site. You will see several new files and folde
 </pre></div>
 
 
-<p>With the initial file structure for your project created, and all the initial housekeeping out of the way, lets commit everything to revision control. It may seem strange to do that now. After all, you havn't done any actual work. But, by doing it now, you save a copy of the original files. Then, if ever you completely munge up a file, you can reach back into the repository and retrieve the original version. So let's do that now. First check the status of your files.</p>
+<p>With the initial file structure for your project created, and all the initial housekeeping out of the way, lets commit everything to revision control. It may seem strange to do that now. After all, you haven't done any actual work. But, by doing it now, you save a copy of the original files. Then, if ever you completely munge up a file, you can reach back into the repository and retrieve the original version. So let's do that now. First check the status of your files.</p>
 <blockquote>
 <p>$ git status</p>
 </blockquote>
